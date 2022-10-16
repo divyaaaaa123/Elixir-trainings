@@ -9,3 +9,5 @@ IO.puts([49,50,51,[116,114,117,101], 52, 53, 54]-- [[116,114,117,101]])      #Su
 list = [49, 50, 51]   
 IO.puts [hd(list)]  #head of the list --> 1
 IO.puts [tl(list)]  #tail of the list --> 23
+
+IO.puts ('hello'== "hello")  # single quote charlist is not equal to double quote string  --> false
