@@ -56,3 +56,25 @@ IO.inspect(Math1.doubleeach([1,2,3]))#[2,4,6]
 IO.inspect(Enum.map([1,2,3], &(&1 * 2)))#[2,4,6] -> much used and simple method
 #However, when programming in Elixir you will rarely use recursion as above to manipulate lists.
 
+#Example: 3 -> Printing numbers of the list
+defmodule Try do
+    def traverse([head | tail], ans \\ 0) do
+    IO.inspect(ans = head)
+    ans = ans + 1
+    traverse(tail, head)
+    end
+    def traverse([],ans) do
+    :end
+    end
+end
+
+    
+IO.inspect(Try.traverse([1,2,3,5,7]))
+
+
+# 1
+# 2
+# 3
+# 5
+# 7
+# :end
